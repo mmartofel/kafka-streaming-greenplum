@@ -48,10 +48,18 @@ Check progress:
  Run Zeppelin notebooks.
 
 
+
+
+
+
 NOTES:
 
 Describe Kafka topic
 
 kafka-topics.sh --describe --zookeeper localhost:2181 --topic crime_topic
+
+Alter number of pertitions for topic:
+
+kafka-topics.sh --alter --zookeeper localhost:2181 --topic crime_topic --partitions 3
 
 
