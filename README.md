@@ -13,3 +13,15 @@ Apache Zeppelin link:
 http://ec2-35-158-228-50.eu-central-1.compute.amazonaws.com:8090/
 no authentication required
 
+Start Kafka:
+
+./kafka_start.sh
+
+List existing Kafka Topics:
+
+kafka-topics.sh --list --zookeeper localhost:2181
+
+If crime_topic doesn't exist, create it:
+
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic crime_topic
+
