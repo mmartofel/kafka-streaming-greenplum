@@ -34,5 +34,16 @@ Run gpkafka (connector process)
 
 ./rum_gpkafka.sh
 
+Stream data to kafka from the web source:
+
+./web_stream_data.sh
+
+Check progress:
+- at psql selecting count from crimes table
+- check commits done by gpkafka:
+  gpkafka check --show-commit-history all crime_cfg.yaml
+ 
+ Run Zeppelin notebooks.
+
 
 
