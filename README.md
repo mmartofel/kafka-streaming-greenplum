@@ -25,3 +25,14 @@ If crime_topic doesn't exist, create it:
 
 kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic crime_topic
 
+Create table as your Greenplum database:
+
+cd crime
+psql < create_crime_table.sql
+
+Run gpkafka (connector process)
+
+./rum_gpkafka.sh
+
+
+
