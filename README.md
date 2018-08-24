@@ -39,8 +39,14 @@ Stream data to kafka from the web source:
 
 ./web_stream_data.sh
 
+you can streal from local file if no access to web data:
+
+./local_stream_data.sh
+
 Check progress:
+
 - at psql selecting count from crimes table
+
 - check commits done by gpkafka:
   
   gpkafka check --show-commit-history all crime_cfg.yaml
