@@ -28,6 +28,7 @@ kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --par
 Create table as your Greenplum database:
 
 cd crime
+
 psql < create_crime_table.sql
 
 Run gpkafka (connector process)
@@ -41,9 +42,16 @@ Stream data to kafka from the web source:
 Check progress:
 - at psql selecting count from crimes table
 - check commits done by gpkafka:
+  
   gpkafka check --show-commit-history all crime_cfg.yaml
  
  Run Zeppelin notebooks.
 
+
+NOTES:
+
+Describe Kafka topic
+
+kafka-topics.sh --describe --zookeeper localhost:2181 --topic crime_topic
 
 
