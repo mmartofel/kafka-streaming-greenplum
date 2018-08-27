@@ -8,49 +8,49 @@ KAFKA:
         BROKERS: localhost:9092
         TOPIC: crime_topic
      COLUMNS:
-        - NAME: id
+        - NAME: id 
           TYPE: INT
-        - NAME: case_number
+        - NAME: case_number 
           TYPE: VARCHAR(20)
-        - NAME: crime_date
+        - NAME: crime_date 
           TYPE: TIMESTAMP
-        - NAME: block
+        - NAME: block 
           TYPE: VARCHAR(50)
-        - NAME: IUCR
+        - NAME: IUCR 
           TYPE: VARCHAR(10)
-        - NAME: primary_type
+        - NAME: primary_type 
           TYPE: VARCHAR(50)
-        - NAME: description
+        - NAME: description 
           TYPE: VARCHAR(75)
-        - NAME: location_desc
+        - NAME: location_desc 
           TYPE: VARCHAR(75)
-        - NAME: arrest
+        - NAME: arrest 
           TYPE: VARCHAR(5)
-        - NAME: domestic
+        - NAME: domestic 
           TYPE: VARCHAR(5)
-        - NAME: beat
+        - NAME: beat 
           TYPE: VARCHAR(7)
-        - NAME: district
+        - NAME: district 
           TYPE: VARCHAR(7)
-        - NAME: ward
+        - NAME: ward 
           TYPE: SMALLINT
-        - NAME: community_area
+        - NAME: community_area 
           TYPE: VARCHAR(10)
-        - NAME: fbi_code
+        - NAME: fbi_code 
           TYPE: VARCHAR(5)
-        - NAME: x_coord
+        - NAME: x_coord 
           TYPE: FLOAT
-        - NAME: y_coord
+        - NAME: y_coord 
           TYPE: FLOAT
-        - NAME: crime_year
+        - NAME: crime_year 
           TYPE: SMALLINT
-        - NAME: record_update_date
+        - NAME: record_update_date 
           TYPE: TIMESTAMP
-        - NAME: latitude
+        - NAME: latitude 
           TYPE: FLOAT
-        - NAME: longitude
+        - NAME: longitude 
           TYPE: FLOAT
-        - NAME: location
+        - NAME: location 
           TYPE: VARCHAR(60)
      FORMAT: csv
      ERROR_LIMIT: 1000
