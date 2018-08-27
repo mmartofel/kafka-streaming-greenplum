@@ -1,0 +1,61 @@
+DATABASE: gpadmin
+USER: gpadmin
+HOST: localhost
+PORT: 5432
+KAFKA:
+   INPUT:
+     SOURCE:
+        BROKERS: localhost:9092
+        TOPIC: crime_topic
+     COLUMNS:
+        - NAME: id
+          TYPE: INT
+        - NAME: case_number
+          TYPE: VARCHAR(20)
+        - NAME: crime_date
+          TYPE: TIMESTAMP
+        - NAME: block
+          TYPE: VARCHAR(50)
+        - NAME: IUCR
+          TYPE: VARCHAR(10)
+        - NAME: primary_type
+          TYPE: VARCHAR(50)
+        - NAME: description
+          TYPE: VARCHAR(75)
+        - NAME: location_desc
+          TYPE: VARCHAR(75)
+        - NAME: arrest
+          TYPE: VARCHAR(5)
+        - NAME: domestic
+          TYPE: VARCHAR(5)
+        - NAME: beat
+          TYPE: VARCHAR(7)
+        - NAME: district
+          TYPE: VARCHAR(7)
+        - NAME: ward
+          TYPE: SMALLINT
+        - NAME: community_area
+          TYPE: VARCHAR(10)
+        - NAME: fbi_code
+          TYPE: VARCHAR(5)
+        - NAME: x_coord
+          TYPE: FLOAT
+        - NAME: y_coord
+          TYPE: FLOAT
+        - NAME: crime_year
+          TYPE: SMALLINT
+        - NAME: record_update_date
+          TYPE: TIMESTAMP
+        - NAME: latitude
+          TYPE: FLOAT
+        - NAME: longitude
+          TYPE: FLOAT
+        - NAME: location
+          TYPE: VARCHAR(60)
+     FORMAT: csv
+     ERROR_LIMIT: 1000
+   OUTPUT:
+     TABLE: crimes
+   COMMIT:
+     MAX_ROW: 10000
+     MINIMAL_INTERVAL: 30000
